@@ -1,0 +1,31 @@
+buildscript {
+  repositories {
+    mavenLocal()
+  }
+  dependencies {
+    classpath "petermd:vertx-gradle-plugin:1.0"
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'vertx'
+apply plugin: 'maven'
+
+group="com.meez.vertx"
+version="1.0-SNAPSHOT"
+
+repositories {
+  mavenLocal()
+  maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+  mavenCentral()
+}
+
+dependencies {
+  compile "io.prometheus:simpleclient:0.0.10"
+  compile "io.prometheus:simpleclient_common:0.0.10"
+}
+
+vertx {
+  platformVersion "2.1RC3"
+}

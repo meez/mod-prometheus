@@ -1,0 +1,5 @@
+{
+	"description":"Support for prometheus.io",
+	"licenses":["Apache 2.0"],
+	"author":"Peter McDonnell"
+}
